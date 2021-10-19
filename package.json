@@ -1,7 +1,7 @@
 {
-  "name": "coding-exercise",
+  "name": "hot-springs",
   "version": "1.0.0",
-  "license": "MIT",
+  "license": "GPL-3.0-only",
   "author": "Maksim Verkhoturov",
   "scripts": {
     "serve": "vue-cli-service serve",
