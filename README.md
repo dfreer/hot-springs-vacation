@@ -19,7 +19,6 @@ Access the deployed version of Hot Springs Vacation here:
 - [App Flow](#App-Flow)
 - [Installation](#Installation)
 - [Usage](#Usage)
-- [Contributing](#Contributing)
 - [Testing](#Testing)
 - [Attribution](#Attribution)
 
