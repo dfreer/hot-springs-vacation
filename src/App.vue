@@ -20,7 +20,7 @@
     </header>
     <router-view class="flex-1" />
     <footer class="flex-0 mt-24">
-      <h5 class="p-5 bg-blue-50 text-xl font-medium">Hot Springs Simulator</h5>
+      <h5 class="p-5 bg-blue-50 text-xl font-medium">Hot Springs Vacation</h5>
     </footer>
   </main>
 </template>

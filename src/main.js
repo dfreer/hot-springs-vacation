@@ -2,8 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-
-import './index.css'
+import './assets/style.css'
 
 Vue.config.productionTip = false
 
@@ -16,5 +15,5 @@ if (process.env.NODE_ENV === 'production') {
 new Vue({
   router,
   store,
-  render: (h) => h(App)
+  render: (h) => h(App),
 }).$mount('#app')

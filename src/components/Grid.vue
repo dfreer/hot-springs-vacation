@@ -43,7 +43,7 @@
     <div>
       <button
         class="button-md text-lg"
-        @click.prevent="startSimulation"
+        @click.prevent="startVacation"
         :disabled="springsInProgress"
       >
         Let the water run
@@ -68,7 +68,7 @@ export default {
   name: 'Grid',
   data: () => ({
     actionInput: 'dig',
-    springsInterval: null
+    springsInterval: null,
   }),
   computed: {
     ...mapGetters([
@@ -79,12 +79,12 @@ export default {
       'isGrid',
       'springsInProgress',
       'springsDate',
-      'fullSpringsReach'
+      'fullSpringsReach',
     ]),
     date() {
       const time = new Date(this.springsDate)
       return `${time.getMonth() + 1}/${time.getDate()}/${time.getFullYear()}`
-    }
+    },
   },
   methods: {
     showLabel(value) {
@@ -95,7 +95,7 @@ export default {
       return 'cell'
     },
     changeState(event) {
-      // should not be able to adjust the dug cells once the simulation has started
+      // should not be able to adjust the dug cells once the vacation has started
       if (this.springsInProgress) return
 
       // no radio button selected
@@ -110,7 +110,7 @@ export default {
       const action = this.actionInput === 'dig' ? 'water' : 'rocks'
       this.$store.dispatch('changeState', { rowI, cellI, action })
     },
-    startSimulation() {
+    startVacation() {
       this.$store.commit('SET_SPRINGS_DATE', new Date().getTime())
       // checks if there's at least one water cell on the grid
       let waterCells = false
@@ -151,8 +151,8 @@ export default {
       this.$store.commit('SET_FULL_SPRINGS_REACH', false)
       clearInterval(this.springsInterval)
       this.$store.dispatch('createGrid', { height: this.height, width: this.width })
-    }
-  }
+    },
+  },
 }
 </script>
 

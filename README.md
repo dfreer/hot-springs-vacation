@@ -1,40 +1,33 @@
-# Hot Springs Simulator
+# Hot Springs Vacation
 
-|                                                                                 |                       |
-| ------------------------------------------------------------------------------- | --------------------- |
-| <img src=".github/assets/hot-spring.svg" width="100px" alt="grid screenshot" /> | Hot Springs Simulator |
+|                                                                                 |                      |
+| ------------------------------------------------------------------------------- | -------------------- |
+| <img src=".github/assets/hot-spring.svg" width="100px" alt="grid screenshot" /> | Hot Springs Vacation |
 
 ---
 
 [![license badge](https://img.shields.io/github/license/mi544/coding-exercise?style=for-the-badge)](https://choosealicense.com/licenses/mit/)
 [![online status badge](https://img.shields.io/website?down_color=lightgrey&down_message=offline&style=for-the-badge&up_color=blue&up_message=online&url=https%3A%2F%2Fhot-springs.personal-projects.space%2F)](https://hot-springs.personal-projects.space/)
 
-You can access the deployed version of Hot Springs Simulator here:  
-[Hot Springs Simulator](https://hot-springs.personal-projects.space/)
+Access the deployed version of Hot Springs Vacation here:  
+[Hot Springs Vacation](https://hot-springs.personal-projects.space/)
 
 ## Table of Contents
 
 - [Description](#Description)
-- [Flow](#Flow)
+- [App Flow](#App Flow)
 - [Installation](#Installation)
-- [Deploying](#Deploying)
 - [Usage](#Usage)
 - [Contributing](#Contributing)
-- [Tests](#Tests)
-- [Questions](#Questions)
-- [Authors](#Authors)
+- [Testing](#Testing)
+- [Attribution](#Attribution)
 
 ## Description
 
-This is a Full-Stack (mainly Front-End) application that takes user input of dimensions (`height` and `width`) and renders a grid.
-
-The user can then set `dig points` and `rocks points` to outline the starting points of hot springs.
-
-With those points laid out on the grid, the user can press the `Let the water run` button to start a simulation of hot springs.
-
-The water will be spreading to adjacent cells every second and in turn will be causing them to start spreading the water too.
-
-Rocks points will remain untouched by the water. These points act as block points.
+`Hot Springs Vacation` is a Vue 2 web app that renders a grid with custom
+dimensions (`width` and `height`). Set the `dig cells` and `rock cells` to
+outline the starting locations of hot springs and rocks that water will have to
+go around. With all the points laid out on the grid, press the `Let the water run` button, kick back, and start your next hot springs vacation!
 
 | ->                                             | ->                                             | ->                                             |
 | ---------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
@@ -42,95 +35,80 @@ Rocks points will remain untouched by the water. These points act as block point
 
 ---
 
-## Flow
+## App Flow
 
-It is a Vue.js (v2) application that utilizes Vuex store extensively.
+This is a Vue 2 app with Vuex and Vue-Router. TailwindCSS is used for styling
 
-`App.vue` is the first component to load, and it mainly takes care of the routes, as well as information that should be displayed on all the pages.
+As the app begins in `src/main.js`, it loads `App.vue` as the first component
+to load. It mainly takes care of the displaying routed content, and information
+that should be displayed on all pages
 
-All the logic happens inside of the `Grid.vue` and `HotSprings.vue` components. `HotSprings` takes user input (dimensions of the grid) and passes it to the Vuex store.
+A lot of the logic happens inside of the `Grid.vue` and `HotSprings.vue`
+components. `HotSprings` takes user input (dimensions of the grid) and passes it
+to the Vuex store
 
-The `Grid` component renders the grid and allows to interact with it by clicking on the cells directly.
-The user can choose which points should be hot spring starting points, and which points should be rocks.
-So long as there's at least one hot spring starting point cell on the grid, the user can click the `Let the water run` button to start spreading the water.
+The `Grid` component renders the grid and allows to interact with it by clicking
+on the cells directly. You can choose which points should be hot spring starting
+points, and which points should be rocks. As long as there's at least one hot
+spring starting point cell on the grid, you can click the `Let the water run`
+button to let it loose and enjoy your vacation
 
-Every `750ms` of the simulation equals to one day, and there's a date indicator to the right of the grid showing the exact day of the simulation starting from today.
+Every `750ms` of your vacation here equals to one day, and there's a date
+indicator to the right of the grid showing the exact day of your vacation
+starting from today (your current browser time)
 
-The hot springs spread as far as they can taking all the cells not protected by rocks cells. When changes are no longer being made on the grid, the water stops and shows the result - the full date when the water from hot springs finished spreading.
+The hot springs spread as far as they can taking all the cells not protected by
+the rocks cells. When changes are no longer being made on the grid, the water
+stops and shows the result - the full date when the water from hot springs
+finished spreading and your vacation ended
 
-The user can then reset the grid to delete all rocks and dig cells, or enter new values in the input fields to define new dimensions for the grid.
+You can then reset the grid to delete all the rocks and water cells, or enter
+new values in the input fields to define new dimensions of the grid
 
-The main logic of the app is controller in the `Grid.vue` and `Vuex Store` files.
+The main logic of the app is handled in the `Grid.vue` and `Vuex Store` files
 
-The main function that takes care of spreading the water to adjacent cells is located in `/src/utils/spreadWater.js`.
-Its job is to confirm the possibility of spreading water in a specific direction passed in and spread the water or skip the turn if it is not possible.
+The main function that takes care of spreading the water to adjacent cells is
+located in `/src/utils/spreadWater.js`. Its job is to confirm the possibility of
+spreading water in a specific direction passed in and spread the water or skip
+the turn if it isn't possible.
 
 ## Installation
 
-You need [Node.js](https://nodejs.org/en/) installed to run this app.
+You need Node and Yarn to run this app; to handle Node and Yarn versioning
+automatically, try [Volta](https://volta.sh/)!
 
-To install all the dependencies required to run this app, in the root folder run
+This project has Node and Yarn versions pinned in the `package.json`. Volta will
+automatically pull in the correct Node and Yarn versions for this package as you
+run any Node or Yarn-related command
 
-```bash
-npm install
+To install all the dependencies, run
+
+```shell
+yarn
 ```
-
-In case of deploying on the server, additionally run
-
-```bash
-cd server && npm install
-```
-
-## Deploying
-
-To deploy, assuming everything is installed, run the following commands on the server
-
-```bash
-cd server && node index.js
-```
-
-You can optionally pass in the `PORT` as an environment variable depending on the system.
-
-The app is currently deployed to an EC2 AWS Instance with PM2 and Nginx serving as a reverse proxy, with both Nginx and PM2 being initialized on the startup to ensure consistent uptime.
 
 ## Usage
 
 To open the development version of the app, run
 
-```bash
-npm run serve
+```shell
+yarn dev
 ```
 
-Follow the instructions from the **About** page on how to proceed.
+For other commands that are available, refer to the `scripts` section of the
+`package.json` file
 
-## Contributing
+## Testing
 
-Pull requests for new features or bug fixes and issues related to those are very welcome!
+This application has Vue Jest tests set up with Vue-cli
 
-## Tests
+To run the test suite, run
 
-This application has very extensive Front-End tests.
-
-To test the app, run
-
-```bash
-npm run test:unit
+```shell
+yarn test
 ```
 
-This will run the test suite and test the flow of all major components and functions.
-
-When contributing, please make sure to add tests for new code.
-
-## Questions
-
-Reach out to me with any questions via email:  
-sd32@pm.me
-
-## Authors
-
-Maksim Verkhoturov
-
-# Attribution
+## Attribution
 
 - Hot spring icon made by [smalllikeart](https://flaticon.com/authors/smalllikeart) from [flaticon.com](https://flaticon.com/)
 - Icons for cells made from the official gameplay screenshot of [`Heroes® of Might & Magic® III - HD Edition`](https://store.steampowered.com/app/297000/Heroes_of_Might__Magic_III__HD_Edition/) by Maksim Verkhoturov

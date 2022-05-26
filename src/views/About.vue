@@ -18,12 +18,12 @@
       </p>
       <p class="mt-8">
         Set the initial dig points of hot springs, as well as rocks around the area, and
-        start the simulation by pressing the
+        start the vacation by pressing the
         <span class="font-semibold">`Let the water run`</span> button!
       </p>
       <p class="mt-4">Watch the water from the hot springs spread as days pass.</p>
       <p class="mt-8 md:px-8">
-        To restart the simulation, press the
+        To restart the vacation, press the
         <span class="font-semibold">`Reset`</span> button and start over.
       </p>
       <p class="text-xl md:text-2xl mt-6">
