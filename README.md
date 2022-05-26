@@ -6,8 +6,8 @@
 
 ---
 
-[![license badge](https://img.shields.io/github/license/mi544/coding-exercise?style=for-the-badge)](https://choosealicense.com/licenses/mit/)
-[![online status badge](https://img.shields.io/website?down_color=lightgrey&down_message=offline&style=for-the-badge&up_color=blue&up_message=online&url=https%3A%2F%2Fhot-springs.personal-projects.space%2F)](https://hot-springs.personal-projects.space/)
+[![license badge](https://img.shields.io/github/license/mi544/coding-exercise?style=for-the-badge)](https://www.gnu.org/philosophy/open-source-misses-the-point.html)
+[![online status badge](https://img.shields.io/website?down_color=lightgrey&down_message=offline&style=for-the-badge&up_color=blue&up_message=online&url=https%3A%2F%2Fhot-springs.netlify.app%2F)](https://hot-springs.netlify.app/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d6ce2bde-6b88-4b76-8a04-835da948cbaa/deploy-status)](https://app.netlify.com/sites/hot-springs/deploys)
 
 Access the deployed version of Hot Springs Vacation here:
@@ -33,8 +33,6 @@ go around. With all the points laid out on the grid, press the `Let the water ru
 | ->                                             | ->                                             | ->                                             |
 | ---------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
 | ![grid screenshot 1](.github/assets/grid1.png) | ![grid screenshot 2](.github/assets/grid2.png) | ![grid screenshot 3](.github/assets/grid3.png) |
-
----
 
 ## App Flow
 
