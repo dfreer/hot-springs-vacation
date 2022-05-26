@@ -9,6 +9,6 @@ import HotSprings from '../components/HotSprings.vue'
 
 export default {
   name: 'Home',
-  components: { HotSprings }
+  components: { HotSprings },
 }
 </script>

@@ -14,7 +14,7 @@
     "autoprefixer": "^9.8.8",
     "core-js": "^3.22.7",
     "postcss": "^7.0.39",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2",
     "vue": "^2.6.14",
     "vue-router": "^3.5.4",
     "vuex": "^3.6.2"
@@ -44,10 +44,10 @@
     "vue-template-compiler": "^2.6.14"
   },
   "bugs": {
-    "url": "https://github.com/mi544/hot-springs/issues"
+    "url": "https://github.com/mi544/hot-springs-vacation/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mi544/hot-springs.git"
+    "url": "git+https://github.com/mi544/hot-springs-vacation.git"
   }
 }

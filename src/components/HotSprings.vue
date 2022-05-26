@@ -37,7 +37,7 @@
           'flex',
           'justify-center',
           'items-center',
-          'rounded-lg'
+          'rounded-lg',
         ]"
       >
         {{ error }}
@@ -56,7 +56,7 @@ export default {
   components: { Grid },
   data: () => ({
     heightInput: null,
-    widthInput: null
+    widthInput: null,
   }),
   computed: { ...mapGetters(['springsInProgress', 'isGrid', 'error']) },
   methods: {
@@ -69,7 +69,7 @@ export default {
       if (this.heightInput > 20 || this.widthInput > 20) {
         this.$store.dispatch(
           'showError',
-          'Number provided is too big, please provide a number less than 20'
+          'Number provided is too big, please provide a number less than 20',
         )
         this.heightInput = null
         this.widthInput = null
@@ -79,7 +79,7 @@ export default {
       if (this.heightInput < 1 || this.widthInput < 1) {
         this.$store.dispatch(
           'showError',
-          'Number provided is too small, please provide a number greater than 1'
+          'Number provided is too small, please provide a number greater than 1',
         )
         this.heightInput = null
         this.widthInput = null
@@ -91,12 +91,12 @@ export default {
       this.$store.commit('SET_ERROR', null)
       this.$store.dispatch('createGrid', {
         height: this.heightInput,
-        width: this.widthInput
+        width: this.widthInput,
       })
 
       this.heightInput = null
       this.widthInput = null
-    }
-  }
+    },
+  },
 }
 </script>

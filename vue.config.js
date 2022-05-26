@@ -6,6 +6,6 @@ module.exports = {
       // alias: {
       //   '@C': path.resolve(__dirname, 'src/components/')
       // }
-    }
-  }
+    },
+  },
 }

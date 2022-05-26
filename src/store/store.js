@@ -11,7 +11,7 @@ export const state = {
   springsDate: null,
   error: null,
   errorTimer: null,
-  fullSpringsReach: null
+  fullSpringsReach: null,
 }
 
 export const getters = {
@@ -41,7 +41,7 @@ export const getters = {
   },
   fullSpringsReach(state) {
     return state.fullSpringsReach
-  }
+  },
 }
 
 export const mutations = {
@@ -70,7 +70,7 @@ export const mutations = {
   },
   SET_FULL_SPRINGS_REACH(state, springsState) {
     state.fullSpringsReach = springsState
-  }
+  },
 }
 
 export const actions = {
@@ -123,5 +123,5 @@ export const actions = {
     clearTimeout(state.errorTimer)
     commit('SET_ERROR', error)
     state.errorTimer = setTimeout(() => commit('SET_ERROR', null), 5 * 1000)
-  }
+  },
 }

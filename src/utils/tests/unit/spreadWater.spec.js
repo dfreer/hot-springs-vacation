@@ -8,18 +8,18 @@ const mockGrid = [
   [
     { id: '0.0', value: null },
     { id: '0.1', value: null },
-    { id: '0.2', value: null }
+    { id: '0.2', value: null },
   ],
   [
     { id: '1.0', value: null },
     { id: '1.1', value: null },
-    { id: '1.2', value: null }
+    { id: '1.2', value: null },
   ],
   [
     { id: '2.0', value: null },
     { id: '2.1', value: null },
-    { id: '2.2', value: null }
-  ]
+    { id: '2.2', value: null },
+  ],
 ]
 
 const mockDimensions = { height: 3, width: 3 }
@@ -56,7 +56,7 @@ describe('spreadWater', () => {
     expect(commit).toHaveBeenCalledWith('SET_CELL_STATE', {
       rowI,
       cellI: cellI - 1,
-      action: 'water'
+      action: 'water',
     })
   })
   it('spreads water right cell when RIGHT for MIDDLE CELL', () => {
@@ -66,7 +66,7 @@ describe('spreadWater', () => {
     expect(commit).toHaveBeenCalledWith('SET_CELL_STATE', {
       rowI,
       cellI: cellI + 1,
-      action: 'water'
+      action: 'water',
     })
   })
   it('spreads water top cell when TOP for MIDDLE CELL', () => {
@@ -76,7 +76,7 @@ describe('spreadWater', () => {
     expect(commit).toHaveBeenCalledWith('SET_CELL_STATE', {
       rowI: rowI - 1,
       cellI,
-      action: 'water'
+      action: 'water',
     })
   })
   it('spreads water bottom cell when BOTTOM for MIDDLE CELL', () => {
@@ -86,7 +86,7 @@ describe('spreadWater', () => {
     expect(commit).toHaveBeenCalledWith('SET_CELL_STATE', {
       rowI: rowI + 1,
       cellI,
-      action: 'water'
+      action: 'water',
     })
   })
 })
