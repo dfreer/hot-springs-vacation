@@ -8,9 +8,10 @@
 
 [![license badge](https://img.shields.io/github/license/mi544/coding-exercise?style=for-the-badge)](https://choosealicense.com/licenses/mit/)
 [![online status badge](https://img.shields.io/website?down_color=lightgrey&down_message=offline&style=for-the-badge&up_color=blue&up_message=online&url=https%3A%2F%2Fhot-springs.personal-projects.space%2F)](https://hot-springs.personal-projects.space/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d6ce2bde-6b88-4b76-8a04-835da948cbaa/deploy-status)](https://app.netlify.com/sites/hot-springs/deploys)
 
-Access the deployed version of Hot Springs Vacation here:  
-[Hot Springs Vacation](https://hot-springs.personal-projects.space/)
+Access the deployed version of Hot Springs Vacation here:
+<https://hot-springs.netlify.app/>
 
 ## Table of Contents
 
