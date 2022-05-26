@@ -1,5 +1,3 @@
-const colors = require('tailwindcss/colors')
-
 const width = {
   'sm-icon': '50px',
   'md-icon': '75px',
@@ -10,31 +8,27 @@ const width = {
   '1/2': '50%',
   '4/6': '66.6%',
   '3/4': '75%',
-  '5/6': '83.3%'
+  '5/6': '83.3%',
 }
 
 module.exports = {
   purge: ['./public/index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    colors: {
-      ...colors,
-      vblue: '#2c3e50'
+    extend: {
+      width,
+      maxWidth: { ...width },
+      screens: {
+        xs: '418px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
+      },
+      colors: {
+        vblue: '#2c3e50',
+      },
     },
-    width,
-    maxWidth: { ...width },
-    screens: {
-      xs: '418px',
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      '2xl': '1536px'
-    },
-    extend: {}
   },
-  variants: {
-    extend: {}
-  },
-  plugins: []
 }
