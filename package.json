@@ -49,5 +49,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mi544/hot-springs-vacation.git"
+  },
+  "volta": {
+    "node": "16.15.0",
+    "yarn": "1.22.18"
   }
 }
