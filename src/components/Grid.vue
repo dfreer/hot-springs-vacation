@@ -150,31 +150,29 @@ export default {
       this.$store.commit('SET_SPRINGS_DATE', null)
       this.$store.commit('SET_FULL_SPRINGS_REACH', false)
       clearInterval(this.springsInterval)
-      this.$store.dispatch('createGrid', { height: this.height, width: this.width })
+      this.$store.dispatch('createGrid', {
+        height: this.height,
+        width: this.width,
+      })
     },
   },
 }
 </script>
 
-<style lang="scss">
-.row {
-  .cell {
-    background: url('../assets/earth.jpg');
-    background-size: cover;
-    border-width: 2px 2px 0 0;
-    width: 50px;
-    height: 50px;
+<style>
+.row .cell {
+  background: url('../assets/earth.jpg');
+  background-size: cover;
+  border-width: 2px 2px 0 0;
+  width: 50px;
+  height: 50px;
+}
+.row.cell:first-child {
+  border-left-width: 2px;
+}
 
-    &:first-child {
-      border-left-width: 2px;
-    }
-  }
-
-  &:last-child {
-    .cell {
-      border-bottom-width: 2px;
-    }
-  }
+.row.cell:last-child .cell {
+  border-bottom-width: 2px;
 }
 .dig {
   background: url('../assets/dig.jpg') !important;

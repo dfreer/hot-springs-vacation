@@ -1,10 +1,15 @@
 <template>
   <div class="about">
     <article class="article1">
-      <img src="../assets/hot-spring.svg" alt="virus icon" class="max-w-1/3 mx-auto" />
+      <img
+        src="../assets/hot-spring.svg"
+        alt="virus icon"
+        class="max-w-1/3 mx-auto"
+      />
       <p class="my-4">
-        This app allows to dig several hot springs, put some rocks around that area and
-        watch the water spread around, ending up with warm and beautiful hot springs.
+        This app allows to dig several hot springs, put some rocks around that
+        area and watch the water spread around, ending up with warm and
+        beautiful hot springs.
       </p>
     </article>
     <article
@@ -17,11 +22,13 @@
         <span class="font-semibold">`Create Grid`</span> button.
       </p>
       <p class="mt-8">
-        Set the initial dig points of hot springs, as well as rocks around the area, and
-        start the vacation by pressing the
+        Set the initial dig points of hot springs, as well as rocks around the
+        area, and start the vacation by pressing the
         <span class="font-semibold">`Let the water run`</span> button!
       </p>
-      <p class="mt-4">Watch the water from the hot springs spread as days pass.</p>
+      <p class="mt-4">
+        Watch the water from the hot springs spread as days pass.
+      </p>
       <p class="mt-8 md:px-8">
         To restart the vacation, press the
         <span class="font-semibold">`Reset`</span> button and start over.
@@ -42,13 +49,16 @@
         target="_blank"
         rel="noreferrer noopener"
       >
-        <img src="../assets/github.svg" alt="GitHub icon" class="m-auto mt-4 mb-1"
+        <img
+          src="../assets/github.svg"
+          alt="GitHub icon"
+          class="m-auto mt-4 mb-1"
       /></a>
     </article>
   </div>
 </template>
 
-<style lang="scss">
+<style>
 .article1 {
   @apply bg-blue-50 sm:w-3/4 md:w-1/2 mx-6 sm:mx-auto md:mr-8 mt-4 mb-12 md:mb-2 p-2 pt-36 sm:p-6 shadow-xl text-lg sm:text-xl;
 }

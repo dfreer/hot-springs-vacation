@@ -1,29 +1,46 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import { createRouter, createWebHistory } from 'vue-router'
 
-Vue.use(VueRouter)
-
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home,
+const router = createRouter({
+  scrollBehavior() {
+    return { top: 0 }
   },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
-  },
-]
+  linkActiveClass: 'active',
+  linkExactActiveClass: 'active',
+  history: createWebHistory(),
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: () => import('@/views/Home.vue'),
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: () => import('@/views/About.vue'),
+    },
+    {
+      path: '/:catchAll(.*)',
+      component: () => import('@/views/NotFound.vue'),
+    },
+  ],
+})
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes,
+router.beforeEach((to, from, next) => {
+  console.log('router::beforeEach', { to, from })
+  // let routeMiddleware = to.meta?.middleware ?? false
+  // if (routeMiddleware && typeof routeMiddleware === 'function') {
+  //   routeMiddleware = [routeMiddleware]
+  // } else routeMiddleware = []
+
+  // let middleware = [global, ...routeMiddleware]
+
+  // for (let i = 0; i < middleware.length; i++) {
+  //   const result = middleware[i]({ from, router, to })
+  //   if (typeof result === 'string') {
+  //     return next(result)
+  //   }
+  // }
+  next()
 })
 
 export default router

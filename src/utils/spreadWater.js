@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 function spreadWater({ rowI, cellI }, direction, grid, dimensions, commit) {
   switch (direction) {
     case 'left':

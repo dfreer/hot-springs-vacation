@@ -1,5 +1,3 @@
-/* eslint-disable no-shadow */
-import Vue from 'vue'
 import { spreadWater } from '../utils'
 
 export const state = {
@@ -53,8 +51,8 @@ export const mutations = {
     state.grid = grid
   },
   SET_CELL_STATE(state, { rowI, cellI, action }) {
-    // state.grid[rowI][cellI].value = action
-    Vue.set(state.grid[rowI][cellI], 'value', action)
+    state.grid[rowI][cellI].value = action
+    // Vue.set(state.grid[rowI][cellI], 'value', action)
   },
   TOGGLE_SPRING_IN_PROGRESS(state, value) {
     state.springsInProgress = value

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import HotSprings from '../components/HotSprings.vue'
+import HotSprings from '@/components/HotSprings.vue'
 
 export default {
   name: 'Home',

@@ -25,7 +25,7 @@
   </main>
 </template>
 
-<style lang="scss">
+<style>
 #app {
   min-height: 100vh;
 }
@@ -36,25 +36,20 @@ button[disabled] {
 
 a {
   @apply text-vblue font-bold;
-
-  &.router-link-exact-active {
-    @apply text-blue-500;
-  }
 }
 
-nav {
-  ul {
-    li::after {
-      content: '|';
-      padding: 0 1rem;
-      @apply font-normal;
-    }
+a.active {
+  @apply text-blue-500;
+}
+nav ul li::after {
+  content: '|';
+  padding: 0 1rem;
+  @apply font-normal;
+}
 
-    li:last-child::after {
-      content: '';
-      padding: 0;
-    }
-  }
+nav ul li:last-child::after {
+  content: '';
+  padding: 0;
 }
 
 .button-lg {

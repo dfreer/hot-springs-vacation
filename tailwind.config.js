@@ -12,8 +12,8 @@ const width = {
 }
 
 module.exports = {
-  purge: ['./public/index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  mode: 'jit',
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       width,
